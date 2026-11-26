@@ -1,0 +1,458 @@
+```html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Створення сучасних, стильних та ефективних сайтів у Києві та області. Професійний підхід, гарантія якості, доступні ціни.">
+  <title>Створення сайтів у Києві — Преміум якість</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap">
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #050608;
+      color: #f8fafc;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+    }
+    header nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      color: #f8fafc;
+    }
+    header .actions a {
+      padding: 10px 20px;
+      margin-left: 10px;
+      border-radius: 9999px;
+      font-weight: bold;
+    }
+    .btn-primary {
+      background-color: #3b82f6;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #2563eb;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 100px 20px 50px;
+    }
+    .hero .content {
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      margin-bottom: 20px;
+    }
+    .hero .cta {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .hero .cta a {
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: bold;
+    }
+    .hero .cta .btn-secondary {
+      background-color: transparent;
+      border: 2px solid #3b82f6;
+      color: #3b82f6;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .hero .image {
+      position: relative;
+      max-width: 500px;
+      margin-left: auto;
+    }
+    .hero .image img {
+      border-radius: 1.5rem;
+    }
+    .hero .floating-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #3b82f6;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+    }
+    .services {
+      padding: 50px 20px;
+    }
+    .services h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .services .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .services .card {
+      background-color: #0d0f14;
+      border: 1px solid #1f2937;
+      border-radius: 1.5rem;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    .services .card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .services .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .services .card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .services .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px;
+    }
+    .services .card ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .services .card ul li::before {
+      content: "✓";
+      color: #3b82f6;
+      font-weight: bold;
+    }
+    .services .card .price {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 15px;
+    }
+    .services .card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 9999px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .steps {
+      background-color: #0d0f14;
+      padding: 50px 20px;
+      border-radius: 1.5rem;
+      margin: 50px 0;
+    }
+    .steps h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .steps .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .steps .step {
+      text-align: center;
+    }
+    .steps .step h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .steps .step p {
+      font-size: 0.875rem;
+      color: #cbd5e1;
+    }
+    .pricing {
+      padding: 50px 20px;
+    }
+    .pricing h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .pricing .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .pricing .package {
+      background-color: #0d0f14;
+      border: 1px solid #1f2937;
+      padding: 20px;
+      border-radius: 1.5rem;
+      text-align: center;
+    }
+    .pricing .package h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .pricing .package .price {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+    .pricing .package ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 15px;
+    }
+    .pricing .package ul li {
+      margin-bottom: 5px;
+    }
+    .pricing .package a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 9999px;
+      font-weight: bold;
+    }
+    .faq {
+      padding: 50px 20px;
+    }
+    .faq h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .faq .accordion {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq .accordion-item {
+      margin-bottom: 10px;
+    }
+    .faq .accordion-item button {
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      background-color: #0d0f14;
+      border: 1px solid #1f2937;
+      color: #f8fafc;
+      border-radius: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq .accordion-item button:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .faq .accordion-item .content {
+      display: none;
+      padding: 15px;
+      background-color: #0d0f14;
+      border: 1px solid #1f2937;
+      border-top: none;
+      border-radius: 0 0 1.5rem 1.5rem;
+    }
+    .faq .accordion-item.open .content {
+      display: block;
+    }
+    .faq .accordion-item.open button {
+      border-color: #3b82f6;
+    }
+    .contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    .contact p {
+      margin-bottom: 10px;
+    }
+    .contact a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 9999px;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d0f14;
+      border-top: 1px solid #1f2937;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Сайт</div>
+  <nav>
+    <a href="#services">Послуги</a>
+    <a href="#pricing">Тарифи</a>
+    <a href="#steps">Етапи</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="actions">
+    <a href="tel:+380671234567" class="btn-primary">Подзвонити</a>
+    <a href="https://t.me/pavlograd_admin" class="btn-primary">Замовити в Telegram</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="content">
+    <span class="badge">🟢 Працюємо щодня • Київ та область</span>
+    <h1>Створення сайтів преміум-класу</h1>
+    <p>Ми створюємо унікальні сайти, які допомагають вашому бізнесу зростати та досягати нових висот.</p>
+    <div class="cta">
+      <a href="#services" class="btn-primary">Замовити зараз</a>
+      <a href="https://t.me/pavlograd_admin" class="btn-secondary">
+        <span>Написати в Telegram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-11.707a1 1 0 00-1.414 0L5.293 10l4 4 4-4-3.586-3.707z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+    <p class="social-proof">3,200+ клієнтів • 12 міс гарантії • 4.9/5 рейтинг</p>
+  </div>
+  <div class="image">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85" alt="Головне фото" onerror="this.style.display='none'" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+    <span class="floating-badge">Преміум якість</span>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Наші послуги</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Послуга 1" onerror="this.style.display='none'" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+      <h3>Лендінг Пейдж</h3>
+      <ul>
+        <li>Дизайн, що продає</li>
+        <li>Адаптивність</li>
+        <li>Швидке завантаження</li>
+      </ul>
+      <p class="price">1 800 ₴</p>
+      <a href="https://t.me/pavlograd_admin">Замовити</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Послуга 2" onerror="this.style.display='none'" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+      <h3>Корпоративний сайт</h3>
+      <ul>
+        <li>Унікальний дизайн</li>
+        <li>SEO-оптимізація</li>
+        <li>Інтеграція CRM</li>
+      </ul>
+      <p class="price">3 500 ₴</p>
+      <a href="https://t.me/pavlograd_admin">Замовити</a>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Послуга 3" onerror="this.style.display='none'" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+      <h3>Інтернет-магазин</h3>
+      <ul>
+        <li>Зручний інтерфейс</li>
+        <li>Платіжні системи</li>
+        <li>Технічна підтримка</li>
+      </ul>
+      <p class="price">6 200 ₴</p>
+      <a href="https://t.me/pavlograd_admin">Замовити</a>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+  <h2>Етапи роботи</h2>
+  <div class="grid">
+    <div class="step">
+      <h3>01. Заявка та оцінка</h3>
+      <p>Заповніть форму або зателефонуйте нам для попередньої консультації.</p>
+    </div>
+    <div class="step">
+      <h3>02. Виїзд майстра</h3>
+      <p>Приїзд до вас протягом 40 хвилин для уточнення деталей.</p>
+    </div>
+    <div class="step">
+      <h3>03. Виконання</h3>
+      <p>Реалізація проекту згідно з вашими вимогами.</p>
+    </div>
+    <div class="step">
+      <h3>04. Контроль та оплата</h3>
+      <p>Перевірка результату та оплата після вашого підтвердження.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>Наші тарифи</h2>
+  <div class="packages">
+    <div class="package">
+      <h3>Базовий</h3>
+      <p class="price">1 800 ₴</p>
+      <ul>
+        <li>Лендінг Пейдж</li>
+        <li>До 3 сторінок</li>
+        <li>Баз
